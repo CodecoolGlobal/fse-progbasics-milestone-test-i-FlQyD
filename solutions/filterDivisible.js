@@ -9,7 +9,15 @@ If the array is empty then it should return an empty array.
  */
 
 function filterDivisible(numbers, divisor) {
+    if (divisor === 0) return null;
+    let returnArray = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if ( (numbers[i] % divisor) === 0) { 
+            returnArray.push(numbers[i])
+        }        
+    }
 
+    return returnArray;
 }
 
 module.exports = filterDivisible;
